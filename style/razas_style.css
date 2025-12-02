@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    text-align: center;
+    color: #c7f7ff;
+    padding: 30px;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    filter: brightness(0.70);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0,40,60,0.2), rgba(0,10,20,0.8));
+    z-index: -1;
+    animation: ondas 12s infinite alternate ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes ondas {
+    0% { filter: blur(0px); opacity: 0.7; }
+    100% { filter: blur(8px); opacity: 1; }
+}
+
+.titulo {
+    font-size: 2.5rem;
+    text-shadow: 0 0 15px #49eaff;
+    animation: brilloTitulo 4s infinite alternate;
+}
+
+@keyframes brilloTitulo {
+    0% { text-shadow: 0 0 10px #49eaff; }
+    100% { text-shadow: 0 0 22px #7bf9ff; }
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.botones label {
+    padding: 12px 22px;
+    background: rgba(0, 200, 255, 0.15);
+    border: 2px solid rgba(0, 200, 255, 0.4);
+    border-radius: 10px;
+    cursor: pointer;
+    color: #a9edff;
+    font-size: 1.1rem;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    animation: hoverPulse 3s infinite ease-in-out;
+}
+
+.clan-info-box {
+    position: fixed;
+    top: 50%;               
+    left: 20px;              
+    transform: translateY(-50%);
+    width: 260px;
+    padding: 20px;
+
+    background: rgba(0, 40, 60, 0.55);
+    border: 2px solid #00caff;
+    border-radius: 18px;
+    box-shadow: 0 0 15px #009acd;
+    backdrop-filter: blur(6px);
+
+    color: #c8faff;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+.clan-info-box h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #9ef3ff;
+    text-shadow: 0 0 8px #00eaff;
+}
+
+.clan-info-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.clan-info-box li {
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    background: rgba(0, 120, 160, 0.25);
+    border-left: 3px solid #00eaff;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+
+@keyframes hoverPulse {
+    0% { box-shadow: 0 0 6px rgba(0,255,255,0.2); }
+    100% { box-shadow: 0 0 15px rgba(0,255,255,0.45); }
+}
+
+.botones label:hover {
+    background: rgba(0, 200, 255, 0.35);
+}
+
+#abysith:checked~.botones label[for="abysith"],
+#hdranytes:checked~.botones label[for="hdranytes"],
+#nerathionos:checked~.botones label[for="nerathionos"],
+#Lumysir:checked~.botones label[for="Lumysir"],
+#Syralun:checked~.botones label[for="Syralun"],
+#Thalorianos:checked~.botones label[for="Thalorianos"],
+#Khar’Nautas:checked~.botones label[for="Khar’Nautas"],
+#Marevantes:checked~.botones label[for="Marevantes"],
+#Cefalor:checked~.botones label[for="Cefalor"],
+#Aqualiths:checked~.botones label[for="Aqualiths"],
+#Serelianos:checked~.botones label[for="Serelianos"],
+#Ocearion:checked~.botones label[for="Ocearion"]{
+    background: rgba(0, 255, 255, 0.55);
+    color: #003b47;
+    box-shadow: 0 0 18px #34eaff;
+}
+
+.pantalla {
+    width: 330px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 18px;
+    background: rgba(0, 255, 255, 0.1);
+    border: 2px solid rgba(0, 255, 255, 0.35);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.35);
+    animation: brillarPantalla 5s infinite alternate ease-in-out;
+}
+
+@keyframes brillarPantalla {
+    0% { box-shadow: 0 0 18px rgba(0,255,255,0.25); }
+    100% { box-shadow: 0 0 35px rgba(0,255,255,0.6); }
+}
+
+.imagen-holo {
+    width: 100%;
+    height: 320px; 
+
+    border-radius: 14px;
+    background-size: contain;      
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0,0,0,0.4);
+
+    box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.5);
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    animation: holograma 4s infinite alternate ease-in-out;
+}
+
+@keyframes holograma {
+    0% { filter: brightness(1); }
+    100% { filter: brightness(1.15); }
+}
+
+#abysith:checked~.pantalla .imagen-holo {
+    background-image: url("../img/custodio_abismo/abysith.png");
+}
+#hdranytes:checked~.pantalla .imagen-holo {
+    background-image: url("../img/custodio_abismo/hydranytes.png");
+}
+#nerathionos:checked~.pantalla .imagen-holo {
+    background-image: url("../img/custodio_abismo/nerathianos.png");
+}
+
+
+#Lumysir:checked~.pantalla .imagen-holo {
+    background-image: url("../img/la_orden_luz_marina/lumysir.png");
+}
+#Syralun:checked~.pantalla .imagen-holo {
+    background-image: url("../img/la_orden_luz_marina/syralun.png");
+}
+#Thalorianos:checked~.pantalla .imagen-holo {
+    background-image: url("../img/la_orden_luz_marina/thalorianos.png");
+}
+
+
+#Khar’Nautas:checked~.pantalla .imagen-holo {
+    background-image: url("../img/los_hijos_coral_viviente/kharNautas.png");
+}
+#Marevantes:checked~.pantalla .imagen-holo {
+    background-image: url("../img/los_hijos_coral_viviente/marevantes.png");
+}
+#Cefalor:checked~.pantalla .imagen-holo {
+    background-image: url("../img/los_hijos_coral_viviente/cefalor.png");
+}
+
+
+#Aqualiths:checked~.pantalla .imagen-holo {
+    background-image: url("../img/los_arquitectos_agua_celeste/aquiliths.png");
+}
+#Serelianos:checked~.pantalla .imagen-holo {
+    background-image: url("../img/los_arquitectos_agua_celeste/serelianos.png");
+}
+#Ocearion:checked~.pantalla .imagen-holo {
+    background-image: url("../img/los_arquitectos_agua_celeste/Ocearion.png");
+}
+
+.texto p {
+    display: none;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #d6faff;
+    text-shadow: 0 0 6px #00eaff;
+    animation: aparecer 0.5s ease-out;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#abysith:checked~.pantalla .desc-abysith {
+    display: block;
+}
+#hdranytes:checked~.pantalla .desc-hdranytes {
+    display: block;
+}
+#nerathionos:checked~.pantalla .desc-nerathionos {
+    display: block;
+}
+
+
+#Lumysir:checked~.pantalla .desc-Lumysir {
+    display: block;
+}
+#Syralun:checked~.pantalla .desc-Syralun {
+    display: block;
+}
+#Thalorianos:checked~.pantalla .desc-Thalorianos {
+    display: block;
+}
+
+
+#Khar’Nautas:checked~.pantalla .desc-Khar’Nautas {
+    display: block;
+}
+#Marevantes:checked~.pantalla .desc-Marevantes {
+    display: block;
+}
+#Cefalor:checked~.pantalla .desc-Cefalor {
+    display: block;
+}
+
+
+#Aqualiths:checked~.pantalla .desc-Aqualiths {
+    display: block;
+}
+#Serelianos:checked~.pantalla .desc-Serelianos {
+    display: block;
+}
+#Ocearion:checked~.pantalla .desc-Ocearion {
+    display: block;
+}
+
+.atlantis-btn {
+    position: fixed;
+    top: 80%;        
+    right: 70px;     
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #c8f7ff;
+    font-size: 20px;
+    font-weight: bold;
+    background: radial-gradient(circle, #024b6b, #012c3b);
+    box-shadow: 0 0 20px #00caff, inset 0 0 15px #0088aa;
+    border: 2px solid #00eaff;
+    transition: 0.3s ease;
+    backdrop-filter: blur(4px);
+    animation: pulse 2.5s infinite ease-in-out;
+}
+
+.atlantis-btn:hover {
+    transform: scale(1.12);
+    box-shadow: 0 0 30px #00d6ff, 0 0 60px #00aaff;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 15px #00eaff; }
+    50% { box-shadow: 0 0 35px #00d6ff; }
+    100% { box-shadow: 0 0 15px #00eaff; }
+}

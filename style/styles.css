@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ+Guides&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NO:wght@100..400&family=Playwrite+NZ+Guides&family=Quicksand:wght@300..700&display=swap');
+
+
+.font_video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    filter: brightness(0.4);
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow:  hidden;
+    position: relative;
+}
+
+.banner .slider {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top:  10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation:  autoRun 15s linear infinite;
+    perspective: perspective(1000px);
+    z-index: 2;
+}
+@keyframes autoRun{
+    from {
+        transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
+    }to{
+        transform:  perspective(1000px) rotateX(-10deg)  rotateY(-360deg);
+    }
+}
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0;
+    transform:
+        rotateY(calc((var(--position) - 1)* (360 / var(--quantify))* 1deg))
+        translateZ(350px);
+}
+
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .slider .item a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.banner .slider .item a img{
+    border-radius: 10px;
+} 
+.banner .slider .item a .clan1{
+    border-radius: 10px;
+    box-shadow: 0 0 10px blue,
+                0 0 10px blue,
+                0 0 10px blue
+}
+
+.banner .slider .item a .clan2{
+    border-radius: 10px;
+    box-shadow: 0 0 10px green,
+                0 0 10px green,
+                0 0 10px green
+}
+
+.banner .slider .item a .clan3{
+    border-radius: 10px;
+    box-shadow: 0 0 10px red,
+                0 0 10px red,
+                0 0 10px red
+}
+.banner .slider .item a .clan4{
+    border-radius: 10px;
+    box-shadow: 0 0 10px yellow,
+                0 0 10px yellow,
+                0 0 10px yellow
+}
+.banner .content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* centra el h1 */
+    z-index: 1;
+}
+
+.banner .content h1{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Playwrite NZ Guides", sans-serif;
+    font-size: 16mm;
+    line-height: 1em;
+    color: grey;
+    z-index: 2;
+}
+
+.banner .content h1::after{
+    position: absolute;
+    inset: 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px rgb(0, 255, 242);
+}
+
+.banner .content .author,
+.banner .content h2 {
+    position: absolute;
+    right: 100px;
+    color: rgb(0, 255, 242);
+    text-align: right 10px;
+}
+
+.banner .content .author {
+    top: 60%;
+    font-size: 3em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.banner .content h2{
+    top: 15%;
+    font-size: 1em;
+}
+
+.banner .content .model{
+    background-image: url(../img/img_alex/Logo_atlanti.png);
+    width: 380px;
+    height: 380px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgb(0, 255, 242),
+                0 0 50px rgb(0, 255, 242),
+                0 0 50px rgb(0, 255, 242)
+}
