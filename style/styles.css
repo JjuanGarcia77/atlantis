@@ -1,6 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ+Guides&family=Quicksand:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+NO:wght@100..400&family=Playwrite+NZ+Guides&family=Quicksand:wght@300..700&display=swap');
-
+body{
+    font-family: Arial;
+    text-align: center;
+    color: #c7f7ff;
+    height: 100vh;
+    overflow: hidden;
+}
 
 .font_video {
     position: fixed;
@@ -25,7 +29,7 @@
     position: absolute;
     width: 200px;
     height: 250px;
-    top:  10%;
+    top: 20%;
     left: calc(50% - 100px);
     transform-style: preserve-3d;
     transform: perspective(1000px);
@@ -65,29 +69,29 @@
 } 
 .banner .slider .item a .clan1{
     border-radius: 10px;
-    box-shadow: 0 0 10px blue,
-                0 0 10px blue,
-                0 0 10px blue
+    box-shadow: 0 0 10px rgb(0, 0, 0),
+                0 0 10px rgb(0, 0, 0),
+                0 0 10px rgb(0, 0, 0)
 }
 
 .banner .slider .item a .clan2{
     border-radius: 10px;
-    box-shadow: 0 0 10px green,
-                0 0 10px green,
-                0 0 10px green
+    box-shadow: 0 0 10px rgb(14, 255, 14),
+                0 0 10px rgb(14, 255, 14),
+                0 0 10px rgb(14, 255, 14)
 }
 
 .banner .slider .item a .clan3{
     border-radius: 10px;
-    box-shadow: 0 0 10px red,
-                0 0 10px red,
-                0 0 10px red
+    box-shadow: 0 0 10px rgb(25, 0, 255),
+                0 0 10px rgb(25, 0, 255),
+                0 0 10px rgb(55, 0, 255)
 }
 .banner .slider .item a .clan4{
     border-radius: 10px;
-    box-shadow: 0 0 10px yellow,
-                0 0 10px yellow,
-                0 0 10px yellow
+    box-shadow: 0 0 10px rgb(255, 255, 255),
+                0 0 10px rgb(255, 255, 255),
+                0 0 10px rgb(255, 255, 255)
 }
 .banner .content {
     position: absolute;
@@ -103,13 +107,13 @@
 
 .banner .content h1{
     position: absolute;
-    top: 20px;
+    top: 0%;
     left: 50%;
     transform: translateX(-50%);
-    font-family: "Playwrite NZ Guides", sans-serif;
     font-size: 16mm;
     line-height: 1em;
-    color: grey;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #a9edff;
     z-index: 2;
 }
 
@@ -118,15 +122,26 @@
     inset: 0;
     content: attr(data-content);
     z-index: 2;
-    -webkit-text-stroke: 2px rgb(0, 255, 242);
+    box-shadow: 
+        0 0 20px rgba(255, 230, 0, 0.6),
+        0 0 40px rgba(0, 0, 255, 0.5),
+        0 0 60px rgba(255, 0, 255, 0.4),
+        0 0 80px rgba(0, 200, 255, 0.3);
 }
 
 .banner .content .author,
 .banner .content h2 {
     position: absolute;
     right: 100px;
-    color: rgb(0, 255, 242);
+    color: #a9edff;
+    box-shadow: 
+        0 0 20px rgba(255, 230, 0, 0.6),
+        0 0 40px rgba(0, 0, 255, 0.5),
+        0 0 60px rgba(255, 0, 255, 0.4),
+        0 0 80px rgba(0, 200, 255, 0.3);
+    border: 2px rgb(0,200,255,0.4);
     text-align: right 10px;
+    border-radius: 20%;
 }
 
 .banner .content .author {
@@ -136,12 +151,13 @@
 }
 
 .banner .content h2{
-    top: 15%;
+    bottom: 93%;
     font-size: 1em;
+    border-radius: 35%;
 }
 
 .banner .content .model{
-    background-image: url(../img/img_alex/Logo_atlanti.png);
+    background-image: url(/IMG/Logo_atlanti.png);
     width: 380px;
     height: 380px;
     position: absolute;
@@ -153,7 +169,10 @@
     background-position: center;
     z-index: 1;
     border-radius: 50%;
-    box-shadow: 0 0 50px rgb(0, 255, 242),
-                0 0 50px rgb(0, 255, 242),
-                0 0 50px rgb(0, 255, 242)
+    border: 0px solid transparent;
+    box-shadow: 
+        0 0 20px rgba(255, 230, 0, 0.6),
+        0 0 40px rgba(0, 0, 255, 0.5),
+        0 0 60px rgba(255, 0, 255, 0.4),
+        0 0 80px rgba(0, 200, 255, 0.3);
 }
