@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 190px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #e9faff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+main{
+    text-align: center;
+}
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.45) saturate(1.2);
+}
+
+/* --- HEADER PROFESIONAL CON EFECTO GLASS --- */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 5px 20px;
+    backdrop-filter: blur(10px);
+    background: rgba(10, 25, 40, 0.45);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #A8E6FF;
+    text-shadow: 0 0 10px rgba(0, 180, 255, 0.5);
+}
+
+header h3 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #d8f7ff;
+}
+
+.encabezado{
+display:flex ;
+align-items: center;
+position: relative;
+}
+
+.title {
+    flex: 1;      
+    text-align: center;
+}
+
+.logo{
+    width: 100px;
+    height: auto;
+    margin-left: auto;
+    margin-right: 40px; 
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow-x: auto;overflow-x: auto;
+    scrollbar-width: none;
+    margin-bottom: 12px ;
+}
+
+
+
+nav a {
+    padding: 5px 5px;
+    font-size: 0.70rem;
+    white-space: nowrap;  
+    color: #dff8ff;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(0, 150, 255, 0.35);
+    color: #ffffff;
+    border-color: rgba(0, 200, 255, 0.6);
+    box-shadow: 0 0 8px rgba(0, 150, 255, 0.7);
+}
+
+main {
+    max-width: 950px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(5, 15, 25, 0.45);
+    border-radius: 18px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 20px rgba(0, 80, 120, 0.4);
+}
+
+
+hr {
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+    margin: 15px 0;
+}
+
+
+details {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px 20px 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+details:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+summary {
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: #A8E6FF;
+    text-shadow: 0 0 6px rgba(0,180,255,0.4);
+}
+
+
+.black, .white, .blue, .green {
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-top: 15px;
+    background: rgba(0, 0, 0, 0.25);
+    border-left: 4px solid;
+}
+
+.black { border-color: #1f1f1f; background: rgba(0,0,0,0.35); }
+.white { border-color: #dcefff; background: rgba(200,200,255,0.12); }
+.blue  { border-color: #3bbdff; background: rgba(0,90,140,0.25); }
+.green { border-color: #3cffb0; background: rgba(0,140,90,0.2); }
+
+h3 {
+    margin-top: 10px;
+    color: #e0faff;
+}
+
+
+ul li {
+    margin-top: 8px;
+}
+
+
+p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #e9faff;
+}
+
+
+.pj{
+    
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.boss{
+    display: block;
+    margin: 10px auto 0;
+    width: 300px;
+    border-radius: 15px;
+}
